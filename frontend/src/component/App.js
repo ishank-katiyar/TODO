@@ -47,21 +47,21 @@ function App() {
 		console.log(newTODO);
 	}, [newTODO]);
 
-	useEffect(() => {
-		var newTodos = TODO;
-		if (SortByState.SortByState === SortByStates.StartDate) {
-			newTodos.sort((a,b) => new Date(b.startDate) - new Date(a.startDate));
-		}
-		if (SortByState.SortByState === SortByStates.DeadLine) {
-			newTodos.sort((a,b) => new Date(b.deadLine) - new Date(a.deadLine));
-		}
-		if (SortByState.SortByState === SortByStates.Priority) {
-			console.log ("sorting by priority");
-			newTodos.sort((a,b) => (Number(a.priority) > Number(b.priority)) ? 1 : ((Number(b.priority) > Number(a.priority)) ? -1 : 0));
-		}
-		console.log ("After sort: ", newTodos);
-		setTODO(newTodos);
-	}, [SortByState, TODO]);
+	// useEffect(() => {
+	// 	var newTodos = TODO;
+	// 	if (SortByState.SortByState === SortByStates.StartDate) {
+	// 		newTodos.sort((a,b) => new Date(b.startDate) - new Date(a.startDate));
+	// 	}
+	// 	if (SortByState.SortByState === SortByStates.DeadLine) {
+	// 		newTodos.sort((a,b) => new Date(b.deadLine) - new Date(a.deadLine));
+	// 	}
+	// 	if (SortByState.SortByState === SortByStates.Priority) {
+	// 		console.log ("sorting by priority");
+	// 		newTodos.sort((a,b) => (Number(a.priority) > Number(b.priority)) ? 1 : ((Number(b.priority) > Number(a.priority)) ? -1 : 0));
+	// 	}
+	// 	console.log ("After sort: ", newTodos);
+	// 	setTODO(newTodos);
+	// }, [SortByState, TODO]);
 
 	const RefreshData = () => {
 		axios
