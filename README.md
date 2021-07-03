@@ -1,5 +1,5 @@
 # MERN Based TODO APP 
-	TODO app running inside docker container's
+TODO app running inside docker container's
 
 #### How to run it locally:-
 1.	clone project into local machine
