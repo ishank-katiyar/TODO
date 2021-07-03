@@ -1,6 +1,6 @@
 FROM node
 
-RUN apt update && apt install curl vim -y
+RUN apt update
 
 WORKDIR /usr/src/app
 
